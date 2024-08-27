@@ -1,4 +1,4 @@
-# serv00/兼容ct8的无交互部署socks5和tuic的脚本
+# serv00/兼容ct8的无交互部署socks5和tuic脚本
 
 ### 前言
 **这个脚本要实现的目的**：在serv00上创建socks5给cmliu的edgetunnel和 epeius项目做SOCKS5变量用的反代，由于serv00没有流量限制，而且线路可以解锁GPT桌面端和客户端，所以很合适。
@@ -20,7 +20,7 @@ https://github.com/0990/socks5 0990的socks5服务端源码来实现必要的功
 - serv00必须允许运行自定义程序，并且添加3个随机端口，一个TCP，两个UDP
 - 必填变量：`PORT=TUIC使用的UDP端口` `STCP=SOCKS5使用的TCP端口` `SUDP=SOCKS5使用的UDP端口`
 - 可选变量：`UUID SOCKSU SOCKSP NEZHA_SERVER NEZHA_PORT NEZHA_KEY`
-- `SOCKSU`和`SOCKSP`是socks5代理的用户名和密码变量，如果不使用那么会使用脚本内置的用户名`oneforall`和密码`allforone`
+- `SOCKSU`和`SOCKSP`是socks5代理的用户名和密码变量，如果不使用那么会使用脚本内置的用户名`oneforall`和密码`allforone`，注意设置用户名和密码变量的时候，不要包含@和:字符，否则会引起解析失败或者传送用户名密码失败。
 
 ```
 PORT=TUIC使用的UDP端口 STCP=SOCKS5使用的TCP端口 SUDP=SOCKS5使用的UDP端口 bash <(curl -Ls https://github.com/Neomanbeta/00-socks5/raw/main/00_ss5.sh)

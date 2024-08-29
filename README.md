@@ -1,5 +1,9 @@
 # serv00/兼容ct8的无交互部署socks5和tuic脚本
 
+### 2024.8.30：经过几天测试，这个方法仍然无法让所有的优选节点的SOCKS5反代生效，只能部分节点有效，所以在能找到完美解决的办法之前不再更新（或者等小火箭，loon等软件更新支持）。
+
+### 如果你需要在iOS下使用SOCKS5做反代的edgetunnel和epeius项目，完全没有问题的客户端是Karing https://karing.app  推荐使用这个客户端。
+
 ### 前言
 **这个脚本要实现的目的**：在serv00上创建socks5给cmliu的edgetunnel和 epeius项目做SOCKS5变量用的反代，由于serv00没有流量限制，而且线路可以解锁GPT桌面端和客户端，所以很合适。
 
